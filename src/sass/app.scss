@@ -1,0 +1,56 @@
+.App {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	grid-template-columns: 18vw 32vw 32vw 18vw;
+	grid-template-rows: 25vh 25vh 25vh 25vh;
+	display: grid;
+}
+.title {
+	font-size: 5vw;
+	margin: auto;
+	font-weight: 300;
+	grid-area: 1/2/2/4;
+	text-align: center;
+	text-shadow: 0 0 9rem black;
+	margin-bottom: 13vh;
+}
+.desc {
+	grid-area: 1/2/2/4;
+	padding: 0vw 5vw 0vw 5vw;
+	text-shadow: 0 0 5rem black;
+	height: 3vw;
+	margin-top: 15vh;
+	display: inline-flex;
+	font-size: 1vw;
+}
+.desc--challenge {
+	grid-area: 1/2/2/4;
+	padding: 0vw 5vw 0vw 5vw;
+	text-shadow: 0 0 5rem black;
+	height: 3vw;
+	margin-top: 21vh;
+	display: inline-flex;
+	font-size: 1vw;
+}
+.rules-heading {
+	grid-area: 1/2/2/4;
+	text-align: center;
+	width: 15vw;
+	margin: 0;
+}
+.rules-challenge {
+	grid-area: 1/2/2/4;
+	width: 9vw;
+	margin: 0;
+}
+.rules {
+	margin: 0;
+	padding: 0rem 0rem 0rem 1rem;
+}
+.game {
+	background: #0000002b;
+	grid-area: 2/2/2/2;
+	height: 30vw;
+	width: 64vw;
+}

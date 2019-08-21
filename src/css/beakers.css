@@ -1,0 +1,12 @@
+.beakers {
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 25% 25% 25% 25%;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%; }
+
+.beaker1 {
+  grid-area: 2/3/3/4; }
+
+.beaker2 {
+  grid-area: 2/2/2/3; }
