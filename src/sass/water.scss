@@ -1,3 +1,67 @@
-.test {
-	background: blue;
+.water-Wrapper{
+display: flex;
+grid-area: 2/2/4/4;
 }
+
+.water-3ml {
+background: #5adbff;
+grid-area: 2/1/4/2;
+-webkit-clip-path: polygon(1% 84%, 4% 96%, 14% 100%, 84% 100%, 95% 98%, 100% 87%, 100% 0, 0 0);
+clip-path: polygon(1% 84%, 4% 96%, 14% 100%, 84% 100%, 95% 98%, 100% 87%, 100% 0, 0 0);
+&.one-ml--3{
+width: 17%;
+    height: 13%;
+    margin-left: 5.15vw;
+    margin-top: 9.8vw;
+}
+&.two-ml--3{
+width: 17%;
+height: 23%;
+margin-left: 5.15vw;
+margin-top: 8.4vw;
+}
+&.three-ml--3 {
+width: 17%;
+height: 41%;
+margin-left: 5.15vw;
+margin-top: 5.7vw;
+}
+}
+.water-5ml {
+background: #5adbff;
+grid-area: inherit;
+-webkit-clip-path: polygon(1% 84%, 4% 96%, 14% 100%, 84% 100%, 95% 98%, 100% 87%, 100% 0, 0 0);
+clip-path: polygon(1% 84%, 4% 96%, 14% 100%, 84% 100%, 95% 98%, 100% 87%, 100% 0, 0 0);
+&.one-ml--5{
+	width: 22%;
+height: 10%;
+margin-left: 10vw;
+margin-top: 12.5vw;
+}
+&.two-ml--5{
+	width: 22%;
+height: 20%;
+margin-left: 10vw;
+margin-top: 11vw;
+}
+&.three-ml--5{
+width: 22%;
+height: 31%;
+margin-left: 10vw;
+margin-top: 9.5vw;
+}
+&.four-ml--5{
+width: 22%;
+height: 42%;
+margin-left: 10vw;
+margin-top: 7.8vw;
+}
+&.five-ml--5{
+	width: 34%;
+height: 72%;
+margin-left: 9.56vw;
+margin-top: 2.3vw;
+}
+}
+
+

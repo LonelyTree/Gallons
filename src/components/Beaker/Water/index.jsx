@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
+import "../../../css/water.css"
 
 
 class Water extends Component{
   render() {
     return (
-              <div className='Water'>
-                {/* <h1>{Number of ml from props}</h1> */}
-              </div>
+      <div className="water-Wrapper">
+        <div className="water-3ml "></div>
+        <div className="water-5ml "></div>
+        </div>
     )
   }
 }
