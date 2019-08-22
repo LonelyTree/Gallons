@@ -4,12 +4,13 @@
 	grid-template-columns: 25% 25% 25% 25%;
 	display: grid;
 	grid-template-rows: 25% 25% 25% 25%;
+	grid-area: 1/1/5/5;
 }
-.beaker1{
+.beaker1 {
 	grid-area: 2/3/3/4;
 	z-index: 5;
 }
-.beaker2{
+.beaker2 {
 	grid-area: 2/2/2/3;
 	z-index: 5;
 }

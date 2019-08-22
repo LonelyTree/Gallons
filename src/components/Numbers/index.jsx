@@ -8,10 +8,10 @@ class Numbers extends Component{
       <div className="number-wrapper">
         <div className='count-wrapper'>
           <h1>total clicks = </h1>
-          <div className="count">0</div>
+          <div className="count">{this.props.state.count}</div>
         </div>
-        <div className="three">0</div>
-        <div className="five">0</div>
+        <div className="three">{this.props.state.ml3}</div>
+        <div className="five">{this.props.state.ml5}</div>
       </div>
     )
   }

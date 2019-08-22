@@ -3,7 +3,8 @@
   height: 100%;
   grid-template-columns: 25% 25% 25% 25%;
   display: grid;
-  grid-template-rows: 25% 25% 25% 25%; }
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-area: 1/1/5/5; }
 
 .beaker1 {
   grid-area: 2/3/3/4;
