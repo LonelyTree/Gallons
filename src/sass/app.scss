@@ -15,6 +15,11 @@
 	text-shadow: 0 0 9rem black;
 	margin-bottom: 13vh;
 }
+.blue {
+	background: #5adbff;
+	font-size: 2vw;
+	padding: 0 1vw;
+}
 .desc {
 	grid-area: 1/2/2/4;
 	padding: 0vw 5vw 0vw 5vw;
@@ -36,7 +41,7 @@
 .rules-heading {
 	grid-area: 1/2/2/4;
 	text-align: center;
-	width: 15vw;
+	width: 16vw;
 	margin: 0;
 }
 .rules-challenge {
@@ -53,4 +58,5 @@
 	grid-area: 2/2/2/2;
 	height: 30vw;
 	width: 64vw;
+	box-shadow: 0 0 1vw #000000c2;
 }
