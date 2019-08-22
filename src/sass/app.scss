@@ -6,6 +6,17 @@
 	grid-template-rows: 25vh 25vh 25vh 25vh;
 	display: grid;
 }
+.shameless-plug {
+	grid-area: 4/2/4/4;
+	text-align: center;
+	align-self: center;
+	margin-top: 7vw;
+}
+.devBy {
+	grid-area: 4/2/4/4;
+	text-align: center;
+	align-self: center;
+}
 .title {
 	font-size: 5vw;
 	margin: auto;
@@ -23,18 +34,18 @@
 .desc {
 	grid-area: 1/2/2/4;
 	padding: 0vw 5vw 0vw 5vw;
-	text-shadow: 0 0 5rem black;
+	text-shadow: 0 0 6rem black;
 	height: 3vw;
-	margin-top: 15vh;
+	margin-top: 14vh;
 	display: inline-flex;
 	font-size: 1vw;
 }
 .desc--challenge {
 	grid-area: 1/2/2/4;
 	padding: 0vw 5vw 0vw 5vw;
-	text-shadow: 0 0 5rem black;
+	text-shadow: 0 0 6rem black;
 	height: 3vw;
-	margin-top: 21vh;
+	margin-top: 20vh;
 	display: inline-flex;
 	font-size: 1vw;
 }
@@ -59,4 +70,7 @@
 	height: 30vw;
 	width: 64vw;
 	box-shadow: 0 0 1vw #000000c2;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: repeat(4, 25%);
 }

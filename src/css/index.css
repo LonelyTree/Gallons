@@ -12,7 +12,9 @@ html {
   /* 2 */
   font-family: 'Livvic', monospace;
   /* 1 */
-  font-size: 1vw; }
+  font-size: 1vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /* Sections
    ========================================================================== */

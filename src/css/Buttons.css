@@ -40,7 +40,8 @@
 .transfer-buttons {
   grid-area: 2/2/3/4;
   display: inline-flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  height: 5vw; }
 
 .trans {
   width: 10vw;
