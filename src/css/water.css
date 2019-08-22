@@ -3,7 +3,7 @@
   grid-area: 2/2/4/4; }
 
 .water-3ml {
-  background: #00c0fa;
+  background: #255fb8;
   grid-area: 2/1/4/2;
   -webkit-clip-path: polygon(1% 84%, 4% 96%, 14% 100%, 84% 100%, 95% 98%, 100% 87%, 100% 0, 0 0);
   clip-path: polygon(1% 84%, 4% 96%, 14% 100%, 84% 100%, 95% 98%, 100% 87%, 100% 0, 0 0); }
@@ -82,7 +82,7 @@
   width: 100%;
   height: 100%;
   transform: translate(0, 100%);
-  background: #1b66d6;
+  background: #1bc1d6;
   transition: all 0.4s; }
   .water_wave {
     width: 200%;
@@ -90,11 +90,11 @@
     bottom: 100%; }
     .water_wave_back {
       right: 0;
-      fill: #00c0fa;
+      fill: #255fb8;
       animation: wave-back 1.4s infinite linear; }
     .water_wave_front {
       left: 0;
-      fill: #1b66d6;
+      fill: #1bc1d6;
       margin-bottom: -1px;
       animation: wave-front 1.7s infinite linear; }
 
