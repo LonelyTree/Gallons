@@ -4,8 +4,8 @@ import '../../css/numbers.css'
 
 function Numbers(props){
     return (
-      <div className="number-wrapper">
-        <div className='count-wrapper'>
+      <div className="number-Wrapper">
+        <div className='count-Wrapper'>
           <h1>total clicks = </h1>
           <div className="count">{props.state.count}</div>
         </div>

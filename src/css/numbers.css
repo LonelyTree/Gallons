@@ -1,11 +1,11 @@
-.number-wrapper {
+.number-Wrapper {
   grid-area: 2/2/4/4;
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(4, 25%);
   z-index: 5;
   margin-bottom: 4.5vw; }
-  .number-wrapper .count-wrapper {
+  .number-Wrapper .count-Wrapper {
     position: absolute;
     right: 20.5vw;
     top: 26vh;
@@ -14,17 +14,17 @@
     display: inline-flex;
     justify-content: space-around;
     align-items: center; }
-    .number-wrapper .count-wrapper .count {
+    .number-Wrapper .count-Wrapper .count {
       margin: 0;
       font-size: 1.5vw; }
-  .number-wrapper .three {
+  .number-Wrapper .three {
     grid-area: 2/1/4/3;
     font-size: 5vw;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-right: 1.5vw; }
-  .number-wrapper .five {
+  .number-Wrapper .five {
     grid-area: 2/3/4/5;
     font-size: 5vw;
     display: inline-flex;

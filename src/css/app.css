@@ -25,12 +25,12 @@
     margin-top: 14vh;
     display: inline-flex;
     font-size: 1vw; }
-    .App .desc .rules-heading {
+    .App .desc .rules-Heading {
       grid-area: 1/2/2/4;
       text-align: center;
       width: 16vw;
       margin: 0; }
-  .App .desc--challenge {
+  .App .desc--Challenge {
     grid-area: 1/2/2/4;
     padding: 0vw 5vw 0vw 5vw;
     text-shadow: 0 0 6rem black;
@@ -38,7 +38,7 @@
     margin-top: 20vh;
     display: inline-flex;
     font-size: 1vw; }
-    .App .desc--challenge .rules-challenge {
+    .App .desc--Challenge .rules-Challenge {
       grid-area: 1/2/2/4;
       width: 9vw;
       margin: 0; }
@@ -58,7 +58,7 @@
     grid-area: 4/2/4/4;
     text-align: center;
     align-self: center; }
-  .App .shameless-plug {
+  .App .shameless-Plug {
     grid-area: 4/2/4/4;
     text-align: center;
     align-self: center;
