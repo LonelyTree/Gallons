@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Scientific-Switcheroo/static/css/main.6ed72509.chunk.css",
-    "main.js": "/Scientific-Switcheroo/static/js/main.6edda386.chunk.js",
-    "main.js.map": "/Scientific-Switcheroo/static/js/main.6edda386.chunk.js.map",
+    "main.css": "/Scientific-Switcheroo/static/css/main.c59e0853.chunk.css",
+    "main.js": "/Scientific-Switcheroo/static/js/main.4600cd62.chunk.js",
+    "main.js.map": "/Scientific-Switcheroo/static/js/main.4600cd62.chunk.js.map",
     "runtime~main.js": "/Scientific-Switcheroo/static/js/runtime~main.0fffc25f.js",
     "runtime~main.js.map": "/Scientific-Switcheroo/static/js/runtime~main.0fffc25f.js.map",
     "static/js/2.750c5b95.chunk.js": "/Scientific-Switcheroo/static/js/2.750c5b95.chunk.js",
     "static/js/2.750c5b95.chunk.js.map": "/Scientific-Switcheroo/static/js/2.750c5b95.chunk.js.map",
     "index.html": "/Scientific-Switcheroo/index.html",
-    "precache-manifest.32d2f6b121fc5d5c45b9a370a5cd5b92.js": "/Scientific-Switcheroo/precache-manifest.32d2f6b121fc5d5c45b9a370a5cd5b92.js",
+    "precache-manifest.980d8f374154f44fff9919373ee1de26.js": "/Scientific-Switcheroo/precache-manifest.980d8f374154f44fff9919373ee1de26.js",
     "service-worker.js": "/Scientific-Switcheroo/service-worker.js",
-    "static/css/main.6ed72509.chunk.css.map": "/Scientific-Switcheroo/static/css/main.6ed72509.chunk.css.map"
+    "static/css/main.c59e0853.chunk.css.map": "/Scientific-Switcheroo/static/css/main.c59e0853.chunk.css.map"
   }
 }
