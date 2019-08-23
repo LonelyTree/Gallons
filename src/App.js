@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Beaker from './components/Beaker'
 import Water from './components/Beaker/Water'
 import Buttons from './components/Buttons'
 import Numbers from './components/Numbers'
+import Completion from './components/Completion'
+
 import "./css/app.css"
+
 
 class App extends Component {
   state = {
       count: 0,
       ml3: 0,
       ml5: 0,
-      reset: false
+      reset: false,
+      celebrate: false
   }
   reset = () => {
     this.setState({
       count: 0,
       ml3: 0,
       ml5: 0,
-      reset: false
+      reset: false,
+      celebrate:false
     })
   }
   transfer3ml5ml = ()=>{
@@ -86,6 +92,13 @@ class App extends Component {
       count: counter
     })
   }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.ml5 !== this.state.ml5 && this.state.ml5 === 4 && this.state.celebrate === false) {
+      setTimeout(() => {
+        this.setState({celebrate: true})
+      }, 750);
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -104,11 +117,24 @@ class App extends Component {
             empty5={this.empty5}
             reset={this.reset}
             />
-          <Numbers state={this.state}/>
+          <Numbers state={this.state} celebration={this.celebration}/>
         </div>
         <p className="devBy">Developed by Alex Hughes</p>
         <p className="shameless-plug">Portfolio: <a style={{textDecoration:"none", color:"#1ab2dd"}}href="https://www.cahworks.com">www.cahworks.com</a></p>
-        </div>
+        {this.state.ml5 === 4
+          ?
+          <ReactCSSTransitionGroup
+            transitionName="winner"
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionLeave={true}
+            transitionLeaveTimeout={500}
+            style={{ gridArea: "2/2/3/4", zIndex: "20" }}>
+            <Completion state={this.state} reset={this.reset} />
+          </ReactCSSTransitionGroup>
+          :
+          null}
+      </div>
     );
   }
 }
