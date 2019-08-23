@@ -5,71 +5,61 @@
   grid-template-columns: 18vw 32vw 32vw 18vw;
   grid-template-rows: 25vh 25vh 25vh 25vh;
   display: grid; }
-
-.shameless-plug {
-  grid-area: 4/2/4/4;
-  text-align: center;
-  align-self: center;
-  margin-top: 7vw; }
-
-.devBy {
-  grid-area: 4/2/4/4;
-  text-align: center;
-  align-self: center; }
-
-.title {
-  font-size: 5vw;
-  margin: auto;
-  font-weight: 300;
-  grid-area: 1/2/2/4;
-  text-align: center;
-  text-shadow: 0 0 9rem black;
-  margin-bottom: 13vh; }
-
-.blue {
-  background: #5adbff;
-  font-size: 2vw;
-  padding: 0 1vw; }
-
-.desc {
-  grid-area: 1/2/2/4;
-  padding: 0vw 5vw 0vw 5vw;
-  text-shadow: 0 0 6rem black;
-  height: 3vw;
-  margin-top: 14vh;
-  display: inline-flex;
-  font-size: 1vw; }
-
-.desc--challenge {
-  grid-area: 1/2/2/4;
-  padding: 0vw 5vw 0vw 5vw;
-  text-shadow: 0 0 6rem black;
-  height: 3vw;
-  margin-top: 20vh;
-  display: inline-flex;
-  font-size: 1vw; }
-
-.rules-heading {
-  grid-area: 1/2/2/4;
-  text-align: center;
-  width: 16vw;
-  margin: 0; }
-
-.rules-challenge {
-  grid-area: 1/2/2/4;
-  width: 9vw;
-  margin: 0; }
-
-.rules {
-  margin: 0;
-  padding: 0rem 0rem 0rem 1rem; }
-
-.game {
-  background: #0000002b;
-  grid-area: 2/2/2/2;
-  height: 30vw;
-  width: 64vw;
-  box-shadow: 0 0 1vw #000000c2;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(4, 25%); }
+  .App .title {
+    font-size: 5vw;
+    margin: auto;
+    font-weight: 300;
+    grid-area: 1/2/2/4;
+    text-align: center;
+    text-shadow: 0 0 9rem black;
+    margin-bottom: 13vh; }
+    .App .title .blue {
+      background: #5adbff;
+      font-size: 2vw;
+      padding: 0 1vw; }
+  .App .desc {
+    grid-area: 1/2/2/4;
+    padding: 0vw 5vw 0vw 5vw;
+    text-shadow: 0 0 6rem black;
+    height: 3vw;
+    margin-top: 14vh;
+    display: inline-flex;
+    font-size: 1vw; }
+    .App .desc .rules-heading {
+      grid-area: 1/2/2/4;
+      text-align: center;
+      width: 16vw;
+      margin: 0; }
+  .App .desc--challenge {
+    grid-area: 1/2/2/4;
+    padding: 0vw 5vw 0vw 5vw;
+    text-shadow: 0 0 6rem black;
+    height: 3vw;
+    margin-top: 20vh;
+    display: inline-flex;
+    font-size: 1vw; }
+    .App .desc--challenge .rules-challenge {
+      grid-area: 1/2/2/4;
+      width: 9vw;
+      margin: 0; }
+  .App .rules {
+    margin: 0;
+    padding: 0rem 0rem 0rem 1rem; }
+  .App .game {
+    background: #0000002b;
+    grid-area: 2/2/2/2;
+    height: 30vw;
+    width: 64vw;
+    box-shadow: 0 0 1vw #000000c2;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%); }
+  .App .devBy {
+    grid-area: 4/2/4/4;
+    text-align: center;
+    align-self: center; }
+  .App .shameless-plug {
+    grid-area: 4/2/4/4;
+    text-align: center;
+    align-self: center;
+    margin-top: 7vw; }

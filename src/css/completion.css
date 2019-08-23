@@ -1,0 +1,63 @@
+.congrats-Wrapper {
+  grid-area: 2/2/4/4;
+  height: 31vw;
+  background: #9f9f9feb;
+  z-index: 20;
+  width: 64vw;
+  margin-top: -1vw;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 25%); }
+  .congrats-Wrapper .huzzah {
+    grid-area: 1/1/3/5;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start; }
+    .congrats-Wrapper .huzzah .huzzah-h1 {
+      border: solid black; }
+      .congrats-Wrapper .huzzah .huzzah-h1 .callBack_Style {
+        background: black;
+        color: white;
+        padding: 0 1vw; }
+  .congrats-Wrapper .replay-Wrapper {
+    grid-area: 4/2/5/4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end; }
+    .congrats-Wrapper .replay-Wrapper .replay {
+      width: 9vw;
+      height: 2vw;
+      margin-bottom: 1vw; }
+  .congrats-Wrapper .iHeartU {
+    grid-area: 2/2/3/4;
+    z-index: 1;
+    width: 21vw;
+    margin-top: -2vw;
+    margin-left: 5.52vw; }
+  .congrats-Wrapper .score {
+    grid-area: 2/2/4/4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-size: 2vw; }
+    .congrats-Wrapper .score .total {
+      background: black;
+      color: white;
+      padding: 0 1vw;
+      font-size: 2.5vw;
+      max-width: 12vw;
+      height: auto;
+      box-shadow: 0 0 1vw #115c71;
+      border: solid white;
+      border-radius: 0.1vw; }
+  .congrats-Wrapper .confettiCannon {
+    grid-area: 3/2/4/4;
+    display: inline-flex;
+    justify-content: center;
+    z-index: 1; }
+  .congrats-Wrapper .winner-appear {
+    opacity: 0.01; }
+  .congrats-Wrapper .winner-appear.winner-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in; }

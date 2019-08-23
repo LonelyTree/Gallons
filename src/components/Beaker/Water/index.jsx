@@ -53,7 +53,6 @@ class Water extends Component{
     }
   }
   componentDidUpdate(prevProps) {
-    console.log('I live!')
     if (this.props.state.ml3 !== prevProps.state.ml3 || this.props.state.ml5 !== prevProps.state.ml5) {
       this.waterLevel_3ml()
       this.waterLevel_5ml()
