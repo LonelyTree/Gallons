@@ -16,7 +16,6 @@ class App extends Component {
       count: 0,
       ml3: 0,
       ml5: 0,
-      reset: false,
       celebrate: false
   }
   reset = () => {
@@ -24,80 +23,75 @@ class App extends Component {
       count: 0,
       ml3: 0,
       ml5: 0,
-      reset: false,
       celebrate:false
     })
   }
-  transfer3ml5ml = ()=>{
+  counter = () => {
+    const addOne = this.state.count + 1;
+    this.setState({count: addOne})
+  }
+  transfer3ml5ml = () => {
+    this.counter()
     const transfered = this.state.ml3 + this.state.ml5
-    const counter = this.state.count + 1;
     if (transfered > 5) {
       const fullCup = 5
       const ml3 = transfered - fullCup;
       this.setState({
         ml3: ml3,
         ml5: fullCup,
-        count: counter
       })
     } else {
       this.setState({
         ml3: 0,
         ml5: transfered,
-        count: counter
       })
     }
   }
   transfer5ml3ml = () => {
+    this.counter()
     const transfered = this.state.ml3 + this.state.ml5
-    const counter = this.state.count + 1;
     if (transfered > 3) {
       const fullCup = 3
       const ml5 = transfered - fullCup
       this.setState({
         ml3: fullCup,
         ml5: ml5,
-        count: counter
       })
     } else {
       this.setState({
         ml3: transfered,
         ml5: 0,
-        count: counter
       })
     }
   }
   add3 = () => {
-    const counter = this.state.count + 1;
+    this.counter()
     this.setState({
       ml3: 3,
-      count: counter
     })
   }
   add5 = () => {
-    const counter = this.state.count + 1;
+    this.counter()
     this.setState({
       ml5: 5,
-      count: counter
     })
   }
   empty3 = () => {
-    const counter = this.state.count + 1;
+    this.counter()
     this.setState({
       ml3: 0,
-      count: counter
     })
   }
   empty5 = () => {
-    const counter = this.state.count + 1;
+    this.counter()
     this.setState({
       ml5: 0,
-      count: counter
     })
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.ml5 !== this.state.ml5 && this.state.ml5 === 4 && this.state.celebrate === false) {
       setTimeout(() => {
-        this.setState({celebrate: true})
+        this.setState({ celebrate: true})
       }, 750);
     }
   }
@@ -105,8 +99,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="title">Scientific <span className="blue">Switcheroo!</span></h1>
-        <div className="desc"><span className="rules-heading">Name of the game:</span><span></span><p className="rules">You have two beakers that fill to 3ml and 5ml respectively. You may empty, refill, and transfer water to each beaker as many times as you'd like. Find a way to end up with 4ml.</p></div>
-        <div className='desc--challenge'><span className="rules-challenge">Challenge:</span><span/><p className='rules'>Complete in less than 7 clicks!</p></div>
+        <div className="desc"><span className="rules-Heading">Name of the game:</span><span></span><p className="rules">You have two beakers that fill to 3ml and 5ml respectively. You may empty, refill, and transfer water to each beaker as many times as you'd like. Find a way to end up with 4ml.</p></div>
+        <div className='desc--Challenge'><span className="rules-Challenge">Challenge:</span><span/><p className='rules'>Complete in less than 7 clicks!</p></div>
         <div className="game">
           <Beaker />
           <Water state={this.state} />
@@ -119,10 +113,10 @@ class App extends Component {
             empty5={this.empty5}
             reset={this.reset}
             />
-          <Numbers state={this.state} celebration={this.celebration}/>
+          <Numbers state={this.state}/>
         </div>
         <p className="devBy">Developed by Alex Hughes</p>
-        <p className="shameless-plug">Portfolio: <a style={{textDecoration:"none", color:"#1ab2dd"}}href="https://www.cahworks.com">www.cahworks.com</a></p>
+        <p className="shameless-Plug">Portfolio: <a style={{textDecoration:"none", color:"#1ab2dd"}}href="https://www.cahworks.com">www.cahworks.com</a></p>
         {this.state.ml5 === 4
           ?
           <ReactCSSTransitionGroup
