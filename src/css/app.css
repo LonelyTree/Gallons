@@ -57,9 +57,10 @@
   .App .devBy {
     grid-area: 4/2/4/4;
     text-align: center;
-    align-self: center; }
+    align-self: center;
+    margin-top: 6vw; }
   .App .shameless-Plug {
     grid-area: 4/2/4/4;
     text-align: center;
     align-self: center;
-    margin-top: 7vw; }
+    margin-top: 2vw; }

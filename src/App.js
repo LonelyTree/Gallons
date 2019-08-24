@@ -115,8 +115,9 @@ class App extends Component {
             />
           <Numbers state={this.state}/>
         </div>
-        <p className="devBy">Developed by Alex Hughes</p>
-        <p className="shameless-Plug">Portfolio: <a style={{textDecoration:"none", color:"#1ab2dd"}}href="https://www.cahworks.com">www.cahworks.com</a></p>
+        <div className="devBy"><p className="credits">Developed by Alex Hughes</p>
+          <p className="shameless-Plug">Portfolio: <a style={{ textDecoration: "none", color: "#1ab2dd" }} href="https://www.cahworks.com">www.cahworks.com</a></p>
+        </div>
         {this.state.ml5 === 4
           ?
           <ReactCSSTransitionGroup
