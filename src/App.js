@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion"
 import Beaker from './components/Beaker'
 import Water from './components/Beaker/Water'
 import Buttons from './components/Buttons'
@@ -8,94 +8,73 @@ import Completion from './components/Completion'
 
 import "./css/app.css"
 
+const App = () => {
+
+  const [initialCount, setCount] = useState(0)
+  const [initialMl3, setMl3 ] = useState(0)
+  const [initialMl5, setMl5 ] = useState(0)
+  const [initialCelebrate, setCelebrate] = useState(false)
 
 
-
-class App extends Component {
-  state = {
-      count: 0,
-      ml3: 0,
-      ml5: 0,
-      celebrate: false
+  const reset = () => {
+    setCount(0)
+    setMl3(0);
+    setMl5(0);
+    setCelebrate(false);
   }
-  reset = () => {
-    this.setState({
-      count: 0,
-      ml3: 0,
-      ml5: 0,
-      celebrate:false
-    })
+  const counter = () => {
+    setCount(initialCount + 1)
   }
-  counter = () => {
-    const addOne = this.state.count + 1;
-    this.setState({count: addOne})
-  }
-  transfer3ml5ml = () => {
-    this.counter()
-    const transfered = this.state.ml3 + this.state.ml5
+  const transfer3ml5ml = () => {
+    counter()
+    const transfered = initialMl3 + initialMl5
     if (transfered > 5) {
       const fullCup = 5
       const ml3 = transfered - fullCup;
-      this.setState({
-        ml3: ml3,
-        ml5: fullCup,
-      })
+      setMl3(ml3);
+      setMl5(fullCup);
     } else {
-      this.setState({
-        ml3: 0,
-        ml5: transfered,
-      })
+      setMl3(0);
+      setMl5(transfered);
     }
   }
-  transfer5ml3ml = () => {
-    this.counter()
-    const transfered = this.state.ml3 + this.state.ml5
+  const transfer5ml3ml = () => {
+    counter()
+    const transfered = initialMl3 + initialMl5
     if (transfered > 3) {
       const fullCup = 3
       const ml5 = transfered - fullCup
-      this.setState({
-        ml3: fullCup,
-        ml5: ml5,
-      })
+      setMl3(fullCup);
+      setMl5(ml5);
     } else {
-      this.setState({
-        ml3: transfered,
-        ml5: 0,
-      })
+      setMl3(transfered);
+      setMl5(0);
     }
   }
-  add3 = () => {
-    this.counter()
-    this.setState({
-      ml3: 3,
-    })
+  const add3 = () => {
+    counter()
+    setMl3(3);
   }
-  add5 = () => {
-    this.counter()
-    this.setState({
-      ml5: 5,
-    })
+  const add5 = () => {
+    counter()
+    setMl5(5);
   }
-  empty3 = () => {
-    this.counter()
-    this.setState({
-      ml3: 0,
-    })
+  const empty3 = () => {
+    counter()
+    setMl3(0);
   }
-  empty5 = () => {
-    this.counter()
-    this.setState({
-      ml5: 0,
-    })
+  const empty5 = () => {
+    counter()
+    setMl5(0);
   }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.ml5 !== this.state.ml5 && this.state.ml5 === 4 && this.state.celebrate === false) {
+  useEffect(() => {
+    if (initialMl5 === 4 && initialCelebrate === false) {
       setTimeout(() => {
-        this.setState({ celebrate: true})
+        setCelebrate(true)
       }, 750);
     }
-  }
-  render() {
+  })
+
     return (
       <div className="App">
         <h1 className="title">Scientific <span className="blue">Switcheroo!</span></h1>
@@ -103,37 +82,33 @@ class App extends Component {
         <div className='desc--Challenge'><span className="rules-Challenge">Challenge:</span><span/><p className='rules'>Complete in less than 7 clicks!</p></div>
         <div className="game">
           <Beaker />
-          <Water state={this.state} />
+          <Water ml3={initialMl3} ml5={initialMl5}/>
           <Buttons
-            transfer3ml5ml={this.transfer3ml5ml}
-            transfer5ml3ml={this.transfer5ml3ml}
-            add3={this.add3}
-            add5={this.add5}
-            empty3={this.empty3}
-            empty5={this.empty5}
-            reset={this.reset}
+            transfer3ml5ml={transfer3ml5ml}
+            transfer5ml3ml={transfer5ml3ml}
+            add3={add3}
+            add5={add5}
+            empty3={empty3}
+            empty5={empty5}
+            reset={reset}
             />
-          <Numbers state={this.state}/>
+          <Numbers ml3={initialMl3} ml5={initialMl5} count={initialCount}/>
         </div>
         <div className="devBy"><p className="credits">Developed by Alex Hughes</p>
           <p className="shameless-Plug">Portfolio: <a style={{ textDecoration: "none", color: "#1ab2dd" }} href="https://www.cahworks.com">www.cahworks.com</a></p>
         </div>
-        {this.state.ml5 === 4
+        {initialMl5 === 4
           ?
-          <ReactCSSTransitionGroup
-            transitionName="winner"
-            transitionAppear={true}
-            transitionAppearTimeout={500}
-            transitionLeave={true}
-            transitionLeaveTimeout={500}
+          <motion.div
+            transition={{ ease: "easeOut", duration: 2 }}
             style={{ gridArea: "2/2/3/4", zIndex: "20" }}>
-            <Completion state={this.state} reset={this.reset} />
-          </ReactCSSTransitionGroup>
+            <Completion celebrate={initialCelebrate} count={initialCount} reset={reset} />
+          </motion.div>
           :
           null}
       </div>
     );
-  }
 }
 
 export default App;
+

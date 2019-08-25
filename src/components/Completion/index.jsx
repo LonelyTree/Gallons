@@ -17,8 +17,8 @@ function Completion(props){
           </svg>
         </div>
         <div className="score">
-          <h1 className="total">{props.state.count} clicks!</h1></div>
-        <div className="confettiCannon"><Confetti active={ props.state.celebrate } config={ Config }/></div>
+          <h1 className="total">{props.count} clicks!</h1></div>
+        <div className="confettiCannon"><Confetti active={ props.celebrate } config={ Config }/></div>
       </div>
     )
   }
