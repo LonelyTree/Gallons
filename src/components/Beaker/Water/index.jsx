@@ -1,64 +1,73 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import "../../../css/water.css"
 
 
-class Water extends Component{
-  state = {
-    ml3: "hide_ml3",
-    ml5: "hide_ml5",
-    percent3ml: 100,
-    percent5ml: 100
-  }
-  waterLevel_3ml = () => {
-    switch (this.props.state.ml3) {
+const Water = (props) => {
+  
+  const [initialMl3, setMl3] = useState('hide_ml3')
+  const [initialMl5, setMl5] = useState('hide_ml5')
+  const [initialPercent3ml, setPercent3ml] = useState(100)
+  const [initialPercent5ml, setPercent5ml] = useState(100)
+  
+  const waterLevel_3ml = () => {
+    switch (props.ml3) {
       case 0:
-        this.setState({percent3ml:110, ml3:"hide_ml3"})
+        setPercent3ml(110)
+        setMl3("hide_ml3")
         break;
       case 1:
-        this.setState({percent3ml:90,ml3: null})
+        setPercent3ml(90)
+        setMl3('')
         break;
       case 2:
-        this.setState({percent3ml:45,ml3: null})
+        setPercent3ml(45)
+        setMl3('')
         break;
       case 3:
-        this.setState({percent3ml:10,ml3: null})
+        setPercent3ml(10)
+        setMl3('')
         break;
       default:
-        this.setState({percent3ml:110, ml3:"hide_ml3"})
+        setPercent3ml(110)
+        setMl3("hide_ml3")
     }
   }
-  waterLevel_5ml = () => {
-        switch (this.props.state.ml5) {
+  const waterLevel_5ml = () => {
+        switch (props.ml5) {
       case 0:
-        this.setState({percent5ml:110, ml5:"hide_ml5"})
+            setPercent5ml(110)
+            setMl5("hide_ml5")
           break;
       case 1:
-            this.setState({percent5ml: 85, ml5:null})
+            setPercent5ml(85)
+            setMl5('')
           break;
       case 2:
-        this.setState({percent5ml:65, ml5:null})
+            setPercent5ml(65)
+            setMl5('')
           break;
       case 3:
-        this.setState({percent5ml:45, ml5:null})
+            setPercent5ml(45)
+            setMl5('')
           break;
       case 4:
-        this.setState({percent5ml:25, ml5:null})
+            setPercent5ml(25)
+            setMl5('')
           break;
       case 5:
-        this.setState({percent5ml:10, ml5:null})
+            setPercent5ml(10)
+            setMl5('')
           break;
       default:
-        this.setState({percent5ml:110, ml5:"hide_ml5"})
+            setPercent5ml(110)
+            setMl5("hide_ml5")
     }
   }
-  componentDidUpdate(prevProps) {
-    if (this.props.state.ml3 !== prevProps.state.ml3 || this.props.state.ml5 !== prevProps.state.ml5) {
-      this.waterLevel_3ml()
-      this.waterLevel_5ml()
-    }
-    }
-  render() {
+  useEffect(()=>{
+      waterLevel_3ml()
+      waterLevel_5ml()
+  })
     return (
       <div className="water-Wrapper">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style={{display: "none"}}>
@@ -69,22 +78,22 @@ class Water extends Component{
             <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
           </symbol>
         </svg>
-        <div className={`beaker3ml ${this.state.ml3}`}>
-          <div id="water" className={`${this.state.ml3} water`} style={{transform:'translate(0'+','+(`${this.state.percent3ml}`)+'%)'}}>
-            <svg viewBox="0 0 560 20" className={`water_wave water_wave_back ${this.state.ml3}`}>
+        <div className={`beaker3ml ${initialMl3}`}>
+          <div id="water" className={`${initialMl3} water`} style={{transform:`translate(0,${initialPercent3ml}%)`}}>
+            <svg viewBox="0 0 560 20" className={`water_wave water_wave_back ${initialMl3}`}>
               <use xlinkHref="#wave"></use>
             </svg>
-            <svg viewBox="0 0 560 20" className={`water_wave water_wave_front ${this.state.ml3}`}>
+            <svg viewBox="0 0 560 20" className={`water_wave water_wave_front ${initialMl3}`}>
               <use xlinkHref="#wave"></use>
             </svg>
           </div>
         </div>
         <div className="beaker5ml">
-          <div id="water" className={`${this.state.ml5} water`} style={{transform:'translate(0'+','+(`${this.state.percent5ml}`)+'%)'}}>
-            <svg viewBox="0 0 560 20" className={`water_wave water_wave_back ${this.state.ml5}`}>
+          <div id="water" className={`${initialMl5} water`} style={{transform:`translate(0,${initialPercent5ml}%)`}}>
+            <svg viewBox="0 0 560 20" className={`water_wave water_wave_back ${initialMl5}`}>
               <use xlinkHref="#wave"></use>
             </svg>
-            <svg viewBox="0 0 560 20" className={`water_wave water_wave_front ${this.state.ml5}`}>
+            <svg viewBox="0 0 560 20" className={`water_wave water_wave_front ${initialMl5}`}>
               <use xlinkHref="#wave"></use>
             </svg>
           </div>
@@ -92,10 +101,5 @@ class Water extends Component{
       </div>
     )
   }
-}
 
 export default Water
-
-// {console.log(this.props.state)}
-//         <div className={`water-3ml ${this.state.ml3}`}></div>
-//         <div className={`water-5ml ${this.state.ml5}`}></div>

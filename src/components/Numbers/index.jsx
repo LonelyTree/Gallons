@@ -7,10 +7,10 @@ function Numbers(props){
       <div className="number-Wrapper">
         <div className='count-Wrapper'>
           <h1>total clicks = </h1>
-          <div className="count">{props.state.count}</div>
+          <div className="count">{props.count}</div>
         </div>
-        <div className="three">{props.state.ml3}</div>
-        <div className="five">{props.state.ml5}</div>
+        <div className="three">{props.ml3}</div>
+        <div className="five">{props.ml5}</div>
       </div>
     )
   }
