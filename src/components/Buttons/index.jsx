@@ -15,8 +15,8 @@ function Buttons(props){
           <button className="sub subtract--Five-ml" onClick={props.empty5}>Empty beaker</button>
         </div>
         <div className="transfer-Buttons">
-          <button className="trans transfer--Three-ml" onClick={props.transfer3ml5ml}>Transfer to 5ml beaker</button>
-          <button className="trans transfer--Five-ml" onClick={props.transfer5ml3ml}>Transfer to 3ml beaker</button>
+          <button className="trans1 transfer--Three-ml" onClick={props.transfer3ml5ml}>Transfer to 5ml beaker</button>
+          <button className="trans2 transfer--Five-ml" onClick={props.transfer5ml3ml}>Transfer to 3ml beaker</button>
         </div>
         <div className="reset-Button" >
           <button className="reset" onClick={props.reset}>Reset</button>

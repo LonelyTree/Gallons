@@ -4,12 +4,12 @@ import "../../../css/water.css"
 
 
 const Water = (props) => {
-  
+
   const [initialMl3, setMl3] = useState('hide_ml3')
   const [initialMl5, setMl5] = useState('hide_ml5')
   const [initialPercent3ml, setPercent3ml] = useState(100)
   const [initialPercent5ml, setPercent5ml] = useState(100)
-  
+
   const waterLevel_3ml = () => {
     switch (props.ml3) {
       case 0:
