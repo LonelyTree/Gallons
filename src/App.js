@@ -8,12 +8,24 @@ import Completion from './components/Completion'
 
 import "./css/app.css"
 
+const variants = {
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.5 }
+  },
+  hidden: {
+    opacity: 0,
+    transition: { duration: 2 }
+  }
+}
 const App = () => {
 
   const [initialCount, setCount] = useState(0)
   const [initialMl3, setMl3 ] = useState(0)
   const [initialMl5, setMl5 ] = useState(0)
   const [initialCelebrate, setCelebrate] = useState(false)
+  const [isOpen, toggle] = useState('')
+
 
 
   const reset = () => {
@@ -21,6 +33,7 @@ const App = () => {
     setMl3(0);
     setMl5(0);
     setCelebrate(false);
+    toggle(false)
   }
   const counter = () => {
     setCount(initialCount + 1)
@@ -70,10 +83,13 @@ const App = () => {
   useEffect(() => {
     if (initialMl5 === 4 && initialCelebrate === false) {
       setTimeout(() => {
+        toggle(true)
+      }, 300);
+      setTimeout(() => {
         setCelebrate(true)
-      }, 750);
+      }, 1000);
     }
-  })
+  },[initialMl5, initialCelebrate, isOpen])
 
     return (
       <div className="App">
@@ -100,8 +116,11 @@ const App = () => {
         {initialMl5 === 4
           ?
           <motion.div
-            transition={{ ease: "easeOut", duration: 2 }}
-            style={{ gridArea: "2/2/3/4", zIndex: "20" }}>
+            initial="hidden"
+            variants={variants}
+            animate={isOpen ? "visible" : "hidden"}
+            style={{ gridArea: "2/2/3/4", zIndex: "20" }}
+            >
             <Completion celebrate={initialCelebrate} count={initialCount} reset={reset} />
           </motion.div>
           :

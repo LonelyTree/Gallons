@@ -1,10 +1,10 @@
 import React from 'react'
 import Confetti from 'react-dom-confetti';
-import Config from './confetti'
+import config from './confetti'
 
 import '../../css/completion.css'
 
-function Completion(props){
+function Completion(props) {
     return (
       <div className="congrats-Wrapper">
         <div className="huzzah"><h1 className="huzzah-h1"><span className="callBack_Style">CONGRATULATIONS!!!</span> YOU WON!!</h1></div>
@@ -18,7 +18,7 @@ function Completion(props){
         </div>
         <div className="score">
           <h1 className="total">{props.count} clicks!</h1></div>
-        <div className="confettiCannon"><Confetti active={ props.celebrate } config={ Config }/></div>
+        <div className="confettiCannon"><Confetti active={ props.celebrate } config={ config }/></div>
       </div>
     )
   }
