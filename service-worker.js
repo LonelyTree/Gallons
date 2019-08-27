@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Scientific-Switcheroo/precache-manifest.641b9d3390632e49ee1fd7142468fc67.js"
+  "/Scientific-Switcheroo/precache-manifest.b86004994f34bc393253d85ebda78c66.js"
 );
 
 self.addEventListener('message', (event) => {
