@@ -11,7 +11,8 @@
 	padding: 0rem 0rem 0rem 1rem;
 }
 
-.mainBackground {
+#mainBackground {
+	will-change: transform;
 	transition-duration: 3000ms;
 	width: 100vw;
 	height: 100vh;
@@ -24,6 +25,7 @@
 	}
 }
 .title {
+	will-change: transform;
 	font-size: 5vw;
 	margin: auto;
 	font-weight: 300;
@@ -43,6 +45,7 @@
 	}
 }
 .game {
+	will-change: transform;
 	grid-area: 2/2/2/2;
 	height: 30vw;
 	width: 64vw;
@@ -55,6 +58,7 @@
 	}
 }
 .desc {
+	will-change: transform;
 	grid-area: 1/2/2/4;
 	padding: 0vw 5vw 0vw 5vw;
 	height: 3vw;
@@ -73,6 +77,7 @@
 	}
 }
 .desc--Challenge {
+	will-change: transform;
 	grid-area: 1/2/2/4;
 	padding: 0vw 5vw 0vw 5vw;
 	height: 3vw;
@@ -90,6 +95,7 @@
 	}
 }
 .devBy {
+	will-change: transform;
 	grid-area: 4/2/4/4;
 	text-align: center;
 	align-self: center;
@@ -97,6 +103,7 @@
 	@include colorSwitch();
 }
 .shameless-Plug {
+	will-change: transform;
 	grid-area: 4/2/4/4;
 	text-align: center;
 	align-self: center;

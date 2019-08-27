@@ -84,6 +84,9 @@
 		margin-top: 0.5vw;
 		.slider--Info {
 			font-size: 1vw;
+			@include themify($themes) {
+				color: themed('black-to-white');
+			}
 		}
 	}
 	.motion-Wrapper {
