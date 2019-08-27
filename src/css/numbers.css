@@ -1,4 +1,5 @@
 .number-Wrapper {
+  will-change: transform;
   grid-area: 2/2/4/4;
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -11,8 +12,8 @@
     color: #ffffff; }
   .number-Wrapper .count-Wrapper {
     position: absolute;
-    right: 20.5vw;
-    top: 26vh;
+    right: -15.5vw;
+    top: -9vh;
     font-size: 0.7vw;
     width: 15vw;
     display: inline-flex;

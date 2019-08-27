@@ -103,7 +103,7 @@ const App = () => {
 
     return (
       <div className={`App theme-${initialTheme}`}>
-        <div className="mainBackground">
+        <div id="mainBackground">
           <Switch changeTheme={changeTheme}/>
         <h1 className="title">Scientific <span className="blue">Switcheroo!</span></h1>
         <div className="desc"><span className="rules-Heading">Name of the game:</span><span></span><p className="rules">You have two beakers that fill to 3ml and 5ml respectively. You may empty, refill, and transfer water to each beaker as many times as you'd like. Find a way to end up with 4ml.</p></div>
