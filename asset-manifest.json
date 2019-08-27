@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Scientific-Switcheroo/static/css/main.a5ca0aa9.chunk.css",
-    "main.js": "/Scientific-Switcheroo/static/js/main.b714ca1c.chunk.js",
-    "main.js.map": "/Scientific-Switcheroo/static/js/main.b714ca1c.chunk.js.map",
+    "main.css": "/Scientific-Switcheroo/static/css/main.848d216d.chunk.css",
+    "main.js": "/Scientific-Switcheroo/static/js/main.003f0c3a.chunk.js",
+    "main.js.map": "/Scientific-Switcheroo/static/js/main.003f0c3a.chunk.js.map",
     "runtime~main.js": "/Scientific-Switcheroo/static/js/runtime~main.0fffc25f.js",
     "runtime~main.js.map": "/Scientific-Switcheroo/static/js/runtime~main.0fffc25f.js.map",
-    "static/js/2.bc665e2f.chunk.js": "/Scientific-Switcheroo/static/js/2.bc665e2f.chunk.js",
-    "static/js/2.bc665e2f.chunk.js.map": "/Scientific-Switcheroo/static/js/2.bc665e2f.chunk.js.map",
+    "static/js/2.08827279.chunk.js": "/Scientific-Switcheroo/static/js/2.08827279.chunk.js",
+    "static/js/2.08827279.chunk.js.map": "/Scientific-Switcheroo/static/js/2.08827279.chunk.js.map",
     "index.html": "/Scientific-Switcheroo/index.html",
-    "precache-manifest.b86004994f34bc393253d85ebda78c66.js": "/Scientific-Switcheroo/precache-manifest.b86004994f34bc393253d85ebda78c66.js",
+    "precache-manifest.9534fe2a7ae21898f012a0816cf1b718.js": "/Scientific-Switcheroo/precache-manifest.9534fe2a7ae21898f012a0816cf1b718.js",
     "service-worker.js": "/Scientific-Switcheroo/service-worker.js",
-    "static/css/main.a5ca0aa9.chunk.css.map": "/Scientific-Switcheroo/static/css/main.a5ca0aa9.chunk.css.map"
+    "static/css/main.848d216d.chunk.css.map": "/Scientific-Switcheroo/static/css/main.848d216d.chunk.css.map"
   }
 }
