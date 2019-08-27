@@ -1,0 +1,71 @@
+$themes: (
+	light: (
+		black-to-white: #000000,
+		white-to-black: #ffffff,
+		app-background: #ffffff,
+		app-titleAccent: #5adbff,
+		app-gameBackground: #0000002b,
+		app-plug: #1ab2dd,
+		celebrate-mainBackground: #9f9f9feb,
+		celebrate-secondary-background: #000000,
+		celebrate-boxShadowColor: #115c71,
+		celebrate-borderColor: #00000069,
+		celebrate-heartFill: #5adbff,
+		water-frontColor: #1bc1d6,
+		water-backColor: #255fb8,
+		water-hiding: #5adbff00,
+		button-celebrate-borderColor: #ffffff,
+		button-background: #ffffff,
+		button-borderColor: #d8d8d8 #d1d1d1 #bababa,
+		slider--bar-background: #5ad4f8,
+		slider-background: #00c4ff,
+		slider-boxShadow: inset 0.7vw 0vw 0.05vw #000000,
+		slider-borderColor: #2993b7 #8b8f90 #5ad9ff #8cdef7,
+	),
+	dark: (
+		black-to-white: #ffffff,
+		white-to-black: #000000,
+		app-background: #000000,
+		app-titleAccent: #ff8c5a,
+		app-gameBackground: #0000002b,
+		app-plug: #dd441a,
+		celebrate-mainBackground: #4a4a4af7,
+		celebrate-secondary-background: #ffffff,
+		celebrate-boxShadowColor: #115c71,
+		celebrate-borderColor: #00000069,
+		celebrate-heartFill: #ff6c36,
+		water-frontColor: #d6501b,
+		water-backColor: #743f1c,
+		water-hiding: #ff8c5a00,
+		button-celebrate-borderColor: #000000,
+		button-background: #6f6d6d42,
+		button-borderColor: #7b7676,
+		slider--bar-background: #d8714a,
+		slider-background: #ef4b05,
+		slider-boxShadow: inset -0.7vw 0vw 0.05vw #000000,
+		slider-borderColor: #ef8f67 #f57842 #ce5521 #5a2007,
+	),
+);
+
+@mixin themify($themes) {
+	@each $theme, $map in $themes {
+		.theme-#{$theme} & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge(
+					$theme-map,
+					(
+						$key: $value,
+					)
+				) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function themed($key) {
+	@return map-get($theme-map, $key);
+}

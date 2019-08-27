@@ -1,80 +1,111 @@
-$titleAccent: #5adbff;
-$gameBackground: #0000002b;
+@import './theme.scss';
 
-.App {
+@mixin colorSwitch {
+	@include themify($themes) {
+		color: themed('black-to-white');
+	}
+}
+
+.rules {
+	margin: 0;
+	padding: 0rem 0rem 0rem 1rem;
+}
+
+.mainBackground {
+	transition-duration: 3000ms;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
 	grid-template-columns: 18vw 32vw 32vw 18vw;
 	grid-template-rows: 25vh 25vh 25vh 25vh;
 	display: grid;
-	.title {
-		font-size: 5vw;
-		margin: auto;
-		font-weight: 300;
+	@include themify($themes) {
+		background: themed('app-background');
+	}
+}
+.title {
+	font-size: 5vw;
+	margin: auto;
+	font-weight: 300;
+	grid-area: 1/2/2/4;
+	text-align: center;
+	margin-bottom: 13vh;
+	@include themify($themes) {
+		text-shadow: 0 0 9rem themed('black-to-white');
+		color: themed('black-to-white');
+	}
+	.blue {
+		font-size: 2vw;
+		padding: 0 1vw;
+		@include themify($themes) {
+			background: themed('app-titleAccent');
+		}
+	}
+}
+.game {
+	grid-area: 2/2/2/2;
+	height: 30vw;
+	width: 64vw;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: repeat(4, 25%);
+	@include themify($themes) {
+		box-shadow: 0 0 1vw themed('black-to-white');
+		background: themed('app-gameBackground');
+	}
+}
+.desc {
+	grid-area: 1/2/2/4;
+	padding: 0vw 5vw 0vw 5vw;
+	height: 3vw;
+	margin-top: 14vh;
+	display: inline-flex;
+	font-size: 1vw;
+	@include themify($themes) {
+		text-shadow: 0 0 6rem themed('black-to-white');
+		color: themed('black-to-white');
+	}
+	.rules-Heading {
 		grid-area: 1/2/2/4;
 		text-align: center;
-		text-shadow: 0 0 9rem black;
-		margin-bottom: 13vh;
-		.blue {
-			background: $titleAccent;
-			font-size: 2vw;
-			padding: 0 1vw;
-		}
-	}
-	.desc {
-		grid-area: 1/2/2/4;
-		padding: 0vw 5vw 0vw 5vw;
-		text-shadow: 0 0 6rem black;
-		height: 3vw;
-		margin-top: 14vh;
-		display: inline-flex;
-		font-size: 1vw;
-		.rules-Heading {
-			grid-area: 1/2/2/4;
-			text-align: center;
-			width: 16vw;
-			margin: 0;
-		}
-	}
-	.desc--Challenge {
-		grid-area: 1/2/2/4;
-		padding: 0vw 5vw 0vw 5vw;
-		text-shadow: 0 0 6rem black;
-		height: 3vw;
-		margin-top: 20vh;
-		display: inline-flex;
-		font-size: 1vw;
-		.rules-Challenge {
-			grid-area: 1/2/2/4;
-			width: 9vw;
-			margin: 0;
-		}
-	}
-	.rules {
+		width: 16vw;
 		margin: 0;
-		padding: 0rem 0rem 0rem 1rem;
 	}
-	.game {
-		background: $gameBackground;
-		grid-area: 2/2/2/2;
-		height: 30vw;
-		width: 64vw;
-		box-shadow: 0 0 1vw #000000c2;
-		display: grid;
-		grid-template-columns: repeat(4, 25%);
-		grid-template-rows: repeat(4, 25%);
+}
+.desc--Challenge {
+	grid-area: 1/2/2/4;
+	padding: 0vw 5vw 0vw 5vw;
+	height: 3vw;
+	margin-top: 20vh;
+	display: inline-flex;
+	font-size: 1vw;
+	@include themify($themes) {
+		text-shadow: 0 0 6rem themed('black-to-white');
+		color: themed('black-to-white');
 	}
-	.devBy {
-		grid-area: 4/2/4/4;
-		text-align: center;
-		align-self: center;
-		margin-top: 6vw;
+	.rules-Challenge {
+		grid-area: 1/2/2/4;
+		width: 9vw;
+		margin: 0;
 	}
-	.shameless-Plug {
-		grid-area: 4/2/4/4;
-		text-align: center;
-		align-self: center;
-		margin-top: 2vw;
+}
+.devBy {
+	grid-area: 4/2/4/4;
+	text-align: center;
+	align-self: center;
+	margin-top: 6vw;
+	@include colorSwitch();
+}
+.shameless-Plug {
+	grid-area: 4/2/4/4;
+	text-align: center;
+	align-self: center;
+	margin-top: 2vw;
+	@include colorSwitch();
+	.plug {
+		text-decoration: none;
+		@include themify($themes) {
+			color: themed('app-plug');
+		}
 	}
 }

@@ -5,6 +5,10 @@
   grid-template-rows: repeat(4, 25%);
   z-index: 5;
   margin-bottom: 4.5vw; }
+  .theme-light .number-Wrapper {
+    color: #000000; }
+  .theme-dark .number-Wrapper {
+    color: #ffffff; }
   .number-Wrapper .count-Wrapper {
     position: absolute;
     right: 20.5vw;

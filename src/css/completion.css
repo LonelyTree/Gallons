@@ -1,24 +1,36 @@
 .congrats-Wrapper {
   grid-area: 2/2/4/4;
   height: 31vw;
-  background: #9f9f9feb;
   z-index: 20;
   width: 64vw;
   margin-top: -1vw;
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(4, 25%); }
+  grid-template-rows: repeat(4, 25%);
+  border-radius: 0.24vw; }
+  .theme-light .congrats-Wrapper {
+    background: #9f9f9feb; }
+  .theme-dark .congrats-Wrapper {
+    background: #4a4a4af7; }
   .congrats-Wrapper .huzzah {
     grid-area: 1/1/3/5;
     display: inline-flex;
     justify-content: center;
     align-items: flex-start; }
-    .congrats-Wrapper .huzzah .huzzah-h1 {
-      border: solid black; }
-      .congrats-Wrapper .huzzah .huzzah-h1 .callBack_Style {
-        background: black;
-        color: white;
-        padding: 0 1vw; }
+    .theme-light .congrats-Wrapper .huzzah .huzzah-h1 {
+      border: solid #000000;
+      color: #000000; }
+    .theme-dark .congrats-Wrapper .huzzah .huzzah-h1 {
+      border: solid #ffffff;
+      color: #ffffff; }
+    .congrats-Wrapper .huzzah .huzzah-h1 .callBack_Style {
+      padding: 0 1vw; }
+      .theme-light .congrats-Wrapper .huzzah .huzzah-h1 .callBack_Style {
+        background: #000000;
+        color: #ffffff; }
+      .theme-dark .congrats-Wrapper .huzzah .huzzah-h1 .callBack_Style {
+        background: #ffffff;
+        color: #000000; }
   .congrats-Wrapper .replay-Wrapper {
     grid-area: 4/2/5/4;
     display: inline-flex;
@@ -28,12 +40,27 @@
       width: 9vw;
       height: 2vw;
       margin-bottom: 1vw; }
+      .theme-light .congrats-Wrapper .replay-Wrapper .replay {
+        background: #ffffff;
+        color: #000000; }
+      .theme-dark .congrats-Wrapper .replay-Wrapper .replay {
+        background: #000000;
+        color: #ffffff; }
   .congrats-Wrapper .iHeartU {
     grid-area: 2/2/3/4;
     z-index: 1;
     width: 21vw;
     margin-top: -2vw;
     margin-left: 5.52vw; }
+    .congrats-Wrapper .iHeartU .svgHeart {
+      stroke: black;
+      fill: #5adbff; }
+      .theme-light .congrats-Wrapper .iHeartU .svgHeart {
+        stroke: #000000;
+        fill: #5adbff; }
+      .theme-dark .congrats-Wrapper .iHeartU .svgHeart {
+        stroke: #ffffff;
+        fill: #ff6c36; }
   .congrats-Wrapper .score {
     grid-area: 2/2/4/4;
     display: inline-flex;
@@ -42,15 +69,19 @@
     z-index: 1;
     font-size: 2vw; }
     .congrats-Wrapper .score .total {
-      background: black;
-      color: white;
       padding: 0 1vw;
       font-size: 2.5vw;
       max-width: 12vw;
       height: auto;
-      box-shadow: 0 0 1vw #115c71;
-      border: solid white;
       border-radius: 0.1vw; }
+      .theme-light .congrats-Wrapper .score .total {
+        color: #000000;
+        box-shadow: 0 0 1vw #115c71;
+        border: solid #00000069; }
+      .theme-dark .congrats-Wrapper .score .total {
+        color: #ffffff;
+        box-shadow: 0 0 1vw #115c71;
+        border: solid #00000069; }
   .congrats-Wrapper .confettiCannon {
     grid-area: 3/2/4/4;
     display: inline-flex;

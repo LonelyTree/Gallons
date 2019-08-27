@@ -28,21 +28,30 @@
     width: 100%;
     height: 100%;
     transform: translate(0, 100%);
-    background: #1bc1d6;
     transition: all 0.4s; }
+    .theme-light .water-Wrapper .water {
+      background: #1bc1d6; }
+    .theme-dark .water-Wrapper .water {
+      background: #d6501b; }
     .water-Wrapper .water_wave {
       width: 200%;
       position: absolute;
       bottom: 100%; }
       .water-Wrapper .water_wave_back {
         right: 0;
-        fill: #255fb8;
         animation: wave-back 1.4s infinite linear; }
+        .theme-light .water-Wrapper .water_wave_back {
+          fill: #255fb8; }
+        .theme-dark .water-Wrapper .water_wave_back {
+          fill: #743f1c; }
       .water-Wrapper .water_wave_front {
         left: 0;
-        fill: #1bc1d6;
         margin-bottom: -1px;
         animation: wave-front 1.7s infinite linear; }
+        .theme-light .water-Wrapper .water_wave_front {
+          fill: #1bc1d6; }
+        .theme-dark .water-Wrapper .water_wave_front {
+          fill: #d6501b; }
   .water-Wrapper .hide_ml3 {
     background: #5adbff00 !important;
     fill: #5adbff00 !important;

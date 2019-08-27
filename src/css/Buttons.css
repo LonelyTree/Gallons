@@ -17,11 +17,27 @@
       font-size: 1vw;
       height: 3vw;
       margin-left: -4vw; }
+      .theme-light .button-Wrapper .transfer-Buttons .trans1 {
+        background: #ffffff;
+        color: #000000;
+        border-color: #d8d8d8 #d1d1d1 #bababa; }
+      .theme-dark .button-Wrapper .transfer-Buttons .trans1 {
+        background: #6f6d6d42;
+        color: #ffffff;
+        border-color: #7b7676; }
     .button-Wrapper .transfer-Buttons .trans2 {
       width: 10vw;
       font-size: 1vw;
       height: 3vw;
       margin-right: -4vw; }
+      .theme-light .button-Wrapper .transfer-Buttons .trans2 {
+        background: #ffffff;
+        color: #000000;
+        border-color: #d8d8d8 #d1d1d1 #bababa; }
+      .theme-dark .button-Wrapper .transfer-Buttons .trans2 {
+        background: #6f6d6d42;
+        color: #ffffff;
+        border-color: #7b7676; }
   .button-Wrapper .subtract-Buttons {
     grid-area: 4/2/5/4;
     display: inline-flex;
@@ -30,6 +46,14 @@
     height: 2vw; }
     .button-Wrapper .subtract-Buttons .sub {
       height: 2vw; }
+      .theme-light .button-Wrapper .subtract-Buttons .sub {
+        background: #ffffff;
+        color: #000000;
+        border-color: #d8d8d8 #d1d1d1 #bababa; }
+      .theme-dark .button-Wrapper .subtract-Buttons .sub {
+        background: #6f6d6d42;
+        color: #ffffff;
+        border-color: #7b7676; }
   .button-Wrapper .add-Buttons {
     grid-area: 2/2/3/4;
     display: inline-flex;
@@ -38,6 +62,14 @@
     margin-top: 1vw; }
     .button-Wrapper .add-Buttons .add {
       height: 2vw; }
+      .theme-light .button-Wrapper .add-Buttons .add {
+        background: #ffffff;
+        color: #000000;
+        border-color: #d8d8d8 #d1d1d1 #bababa; }
+      .theme-dark .button-Wrapper .add-Buttons .add {
+        background: #6f6d6d42;
+        color: #ffffff;
+        border-color: #7b7676; }
   .button-Wrapper .reset-Button {
     grid-area: 4/2/5/4;
     display: inline-flex;
@@ -47,3 +79,64 @@
       height: 2vw;
       margin-bottom: 0.5vw;
       width: 7vw; }
+      .theme-light .button-Wrapper .reset-Button .reset {
+        background: #ffffff;
+        color: #000000;
+        border-color: #d8d8d8 #d1d1d1 #bababa; }
+      .theme-dark .button-Wrapper .reset-Button .reset {
+        background: #6f6d6d42;
+        color: #ffffff;
+        border-color: #7b7676; }
+
+.slider-Wrapper {
+  grid-area: 1/4/1/4;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 25%); }
+  .slider-Wrapper .slider--Info-Wrapper {
+    height: 3vw;
+    grid-area: 2/1/2/4;
+    text-align: center;
+    margin-top: 0.5vw; }
+    .slider-Wrapper .slider--Info-Wrapper .slider--Info {
+      font-size: 1vw; }
+  .slider-Wrapper .motion-Wrapper {
+    width: 100%;
+    height: 100%;
+    grid-area: 3/1/3/4;
+    z-index: 5; }
+    .slider-Wrapper .motion-Wrapper .slider {
+      transition-duration: 1000ms;
+      height: 1.5vw;
+      width: 2vw;
+      top: 5.15vw;
+      right: 6.2vw;
+      border-radius: 100vw;
+      border: 0.2vw outset #d8d8d8; }
+      .theme-light .slider-Wrapper .motion-Wrapper .slider {
+        background: #00c4ff;
+        box-shadow: inset 0.7vw 0vw 0.05vw #000000;
+        border-color: #2993b7 #8b8f90 #5ad9ff #8cdef7; }
+      .theme-dark .slider-Wrapper .motion-Wrapper .slider {
+        background: #ef4b05;
+        box-shadow: inset -0.7vw 0vw 0.05vw #000000;
+        border-color: #ef8f67 #f57842 #ce5521 #5a2007; }
+  .slider-Wrapper .bar-Wrapper {
+    width: 100%;
+    height: 100%;
+    grid-area: 3/1/4/4; }
+    .slider-Wrapper .bar-Wrapper .slider--Bar {
+      transition-duration: 3000ms;
+      width: 6vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      top: 4.8vw;
+      right: 2.9vw;
+      z-index: -1;
+      box-shadow: inset 0 0 0.5vw black;
+      border: outset 0.1vw;
+      margin: 0 auto; }
+      .theme-light .slider-Wrapper .bar-Wrapper .slider--Bar {
+        background: #5ad4f8; }
+      .theme-dark .slider-Wrapper .bar-Wrapper .slider--Bar {
+        background: #d8714a; }
