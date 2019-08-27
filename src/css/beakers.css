@@ -13,3 +13,9 @@
     grid-area: 1/2/2/3;
     z-index: 10;
     margin-top: 4.5vw; }
+
+.theme-light .svg {
+  fill: #000000; }
+
+.theme-dark .svg {
+  fill: #ffffff; }

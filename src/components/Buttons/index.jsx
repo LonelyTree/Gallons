@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../css/Buttons.css'
+import '../../css/buttons.css'
 
 
 function Buttons(props){

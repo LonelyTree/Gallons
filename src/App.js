@@ -5,6 +5,7 @@ import Water from './components/Beaker/Water'
 import Buttons from './components/Buttons'
 import Numbers from './components/Numbers'
 import Completion from './components/Completion'
+import Switch from "./components/Buttons/themeShift"
 
 import "./css/app.css"
 
@@ -24,6 +25,8 @@ const App = () => {
   const [initialMl3, setMl3 ] = useState(0)
   const [initialMl5, setMl5 ] = useState(0)
   const [initialCelebrate, setCelebrate] = useState(false)
+  const [initialSwitch, setSwitch] = useState(false)
+  const [initialTheme, setTheme] = useState("light")
   const [isOpen, toggle] = useState('')
 
 
@@ -34,6 +37,9 @@ const App = () => {
     setMl5(0);
     setCelebrate(false);
     toggle(false)
+  }
+  const changeTheme = () => {
+    setSwitch(!initialSwitch);
   }
   const counter = () => {
     setCount(initialCount + 1)
@@ -89,15 +95,21 @@ const App = () => {
         setCelebrate(true)
       }, 1000);
     }
-  },[initialMl5, initialCelebrate, isOpen])
+    if (initialSwitch !== true) {
+      setTheme("light")
+    }
+    else { setTheme("dark") }
+  },[initialMl5, initialCelebrate, isOpen, initialSwitch])
 
     return (
-      <div className="App">
+      <div className={`App theme-${initialTheme}`}>
+        <div className="mainBackground">
+          <Switch changeTheme={changeTheme}/>
         <h1 className="title">Scientific <span className="blue">Switcheroo!</span></h1>
         <div className="desc"><span className="rules-Heading">Name of the game:</span><span></span><p className="rules">You have two beakers that fill to 3ml and 5ml respectively. You may empty, refill, and transfer water to each beaker as many times as you'd like. Find a way to end up with 4ml.</p></div>
         <div className='desc--Challenge'><span className="rules-Challenge">Challenge:</span><span/><p className='rules'>Complete in less than 7 clicks!</p></div>
         <div className="game">
-          <Beaker />
+            <Beaker initialSwitch={initialSwitch}/>
           <Water ml3={initialMl3} ml5={initialMl5}/>
           <Buttons
             transfer3ml5ml={transfer3ml5ml}
@@ -111,7 +123,7 @@ const App = () => {
           <Numbers ml3={initialMl3} ml5={initialMl5} count={initialCount}/>
         </div>
         <div className="devBy"><p className="credits">Developed by Alex Hughes</p>
-          <p className="shameless-Plug">Portfolio: <a style={{ textDecoration: "none", color: "#1ab2dd" }} href="https://www.cahworks.com">www.cahworks.com</a></p>
+          <p className="shameless-Plug">Portfolio: <a className="plug" href="https://www.cahworks.com">www.cahworks.com</a></p>
         </div>
         {initialMl5 === 4
           ?
@@ -121,10 +133,12 @@ const App = () => {
             animate={isOpen ? "visible" : "hidden"}
             style={{ gridArea: "2/2/3/4", zIndex: "20" }}
             >
-            <Completion celebrate={initialCelebrate} count={initialCount} reset={reset} />
+              <Completion theme={initialTheme} celebrate={initialCelebrate} count={initialCount} reset={reset} />
           </motion.div>
           :
-          null}
+            null
+          }
+          </div>
       </div>
     );
 }

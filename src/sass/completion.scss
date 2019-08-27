@@ -1,27 +1,34 @@
-$mainBackground: #9f9f9feb;
-$secondaryBackground: black;
+@import './theme.scss';
 
 .congrats-Wrapper {
 	grid-area: 2/2/4/4;
 	height: 31vw;
-	background: $mainBackground;
 	z-index: 20;
 	width: 64vw;
 	margin-top: -1vw;
 	display: grid;
 	grid-template-columns: repeat(4, 25%);
 	grid-template-rows: repeat(4, 25%);
+	border-radius: 0.24vw;
+	@include themify($themes) {
+		background: themed('celebrate-mainBackground');
+	}
 	.huzzah {
 		grid-area: 1/1/3/5;
 		display: inline-flex;
 		justify-content: center;
 		align-items: flex-start;
 		.huzzah-h1 {
-			border: solid black;
+			@include themify($themes) {
+				border: solid themed('black-to-white');
+				color: themed('black-to-white');
+			}
 			.callBack_Style {
-				background: $secondaryBackground;
-				color: white;
 				padding: 0 1vw;
+				@include themify($themes) {
+					background: themed('celebrate-secondary-background');
+					color: themed('white-to-black');
+				}
 			}
 		}
 	}
@@ -34,6 +41,10 @@ $secondaryBackground: black;
 			width: 9vw;
 			height: 2vw;
 			margin-bottom: 1vw;
+			@include themify($themes) {
+				background: themed('white-to-black');
+				color: themed('black-to-white');
+			}
 		}
 	}
 	.iHeartU {
@@ -42,6 +53,14 @@ $secondaryBackground: black;
 		width: 21vw;
 		margin-top: -2vw;
 		margin-left: 5.52vw;
+		.svgHeart {
+			stroke: black;
+			fill: #5adbff;
+			@include themify($themes) {
+				stroke: themed('black-to-white');
+				fill: themed('celebrate-heartFill');
+			}
+		}
 	}
 	.score {
 		grid-area: 2/2/4/4;
@@ -51,15 +70,17 @@ $secondaryBackground: black;
 		z-index: 1;
 		font-size: 2vw;
 		.total {
-			background: $secondaryBackground;
-			color: white;
 			padding: 0 1vw;
 			font-size: 2.5vw;
 			max-width: 12vw;
 			height: auto;
-			box-shadow: 0 0 1vw #115c71;
-			border: solid white;
 			border-radius: 0.1vw;
+			@include themify($themes) {
+				background: themed('celebrate-secondaryBackground');
+				color: themed('black-to-white');
+				box-shadow: 0 0 1vw themed('celebrate-boxShadowColor');
+				border: solid themed('celebrate-borderColor');
+			}
 		}
 	}
 	.confettiCannon {
