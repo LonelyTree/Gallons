@@ -23,6 +23,3 @@ const Switch = (props) => {
 }
 
 export default Switch
-
-					// transformTemplate={
-					// 	({ x, y, z }) => `translateX(${x}vw) translateY(${y}vw) translateZ(${z}vw)`}
