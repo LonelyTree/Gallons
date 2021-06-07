@@ -1,6 +1,6 @@
 <img src="./src/media/images/png/title.png">
 
-### A fun game to confuse your brain and make you surprisingly thirsty.
+### A fun [game](https://lonelytree.github.io/Scientific-Switcheroo/) to confuse your brain and make you surprisingly thirsty.
 
 ### *All at the same time!*
 
